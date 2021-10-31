@@ -18,7 +18,7 @@ extern "C" {
 #define SYMBOLS "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm     "
 #define NUMB_OF_SPACES 5
 
-#define MIN_SIZE 1048576     // 1MБайт
+#define MIN_SIZE 131072      // 128КБайт
 #define MAX_SIZE 104857600   // 100Мбайт
 
 #define BUFF_SIZE 500
