@@ -173,4 +173,3 @@ char *find_longest_word(char *string_of_words) {
 
     return longest_word;
 }
-
