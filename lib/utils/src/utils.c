@@ -23,28 +23,21 @@ char *create_words() {
     return words;
 }
 
-size_t word_counter(const char *string_of_words) {
+size_t word_counter(char *string_of_words) {
     if (string_of_words == NULL) {
         return 0;
     }
 
-    char *copy = (char *) malloc(sizeof(char) * (strlen(string_of_words) + 1));
-    if (copy == NULL) {
-        return 0;
-    }
-    strcpy(copy, string_of_words);
     size_t word_counter = 0;
+    size_t i = 0;
+    while(string_of_words[i] != '\0'){
+        if (string_of_words[i] == ' '){
+            word_counter++;
+        }
+        i++;
+    }
+    word_counter++;
 
-    char *word = strtok(copy, " ");
-    if (word == NULL) {
-        free(copy);
-        return 0;
-    }
-    while (word != NULL) {
-        word = strtok(NULL, " ");
-        word_counter++;
-    }
-    free(copy);
     return word_counter;
 }
 
@@ -55,13 +48,11 @@ char **create_array_of_words(char *string_of_words) {
 
     size_t words_count = word_counter(string_of_words);
     if (words_count == 0) {
-        free(string_of_words);
         return NULL;
     }
     size_t j = 0, k = 0, h = 0;
     char **words_arr = (char **) malloc(words_count * sizeof(char *));
     if (words_arr == NULL) {
-        free(string_of_words);
         return NULL;
     }
 
@@ -71,7 +62,6 @@ char **create_array_of_words(char *string_of_words) {
             for (size_t l = i; l > 0; l--) {
                 free(words_arr[l - 1]);
             }
-            free(string_of_words);
             free(words_arr);
             return NULL;
         }
