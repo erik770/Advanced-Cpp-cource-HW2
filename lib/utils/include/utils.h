@@ -19,7 +19,7 @@ extern "C" {
 #define NUMB_OF_SPACES 5
 
 #define MIN_SIZE 1048576      // 1МБайт
-#define MAX_SIZE 104857600   // 100Мбайт
+#define MAX_SIZE 10485760     // 10Мбайт 10 а не 100 чтобы тесты не долго крутились
 
 #define BUFF_SIZE 1024
 
