@@ -17,8 +17,8 @@ char *find_longest_word(char *string_of_words) {
 
     size_t i = 0, j = 0;
 
-    while (string_of_words[i] != '\0') {
-        while (string_of_words[i] != ' ') {
+    while (true) {
+        while (string_of_words[i] != ' ' && string_of_words[i] !='\0') {
             current_word[j] = string_of_words[i];
             i++;
             j++;
@@ -26,8 +26,12 @@ char *find_longest_word(char *string_of_words) {
         current_word[j] = '\0';
         j = 0;
         i++;
+
         if (strlen(current_word) > strlen(longest_word)) {
             strcpy(longest_word, current_word);
+        }
+        if(string_of_words[i-1] == '\0') {
+            break;
         }
     }
 
