@@ -2,7 +2,7 @@
 #include "word_search_interface.h"
 #include <ctime>
 
-#define NUM_OF_TESTS 15
+#define NUM_OF_TESTS 10
 
 int main() {
     double timer = 0;
