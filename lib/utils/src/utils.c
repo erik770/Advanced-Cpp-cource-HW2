@@ -30,8 +30,8 @@ size_t word_counter(char *string_of_words) {
 
     size_t word_counter = 0;
     size_t i = 0;
-    while(string_of_words[i] != '\0'){
-        if (string_of_words[i] == ' '){
+    while (string_of_words[i] != '\0') {
+        if (string_of_words[i] == ' ') {
             word_counter++;
         }
         i++;
@@ -80,5 +80,3 @@ char **create_array_of_words(char *string_of_words) {
     words_arr[k++][h++] = '\0';
     return words_arr;
 }
-
-

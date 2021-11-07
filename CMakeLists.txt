@@ -12,6 +12,10 @@ add_subdirectory(lib/utils)
 add_subdirectory(lib/word_search)
 add_subdirectory(lib/word_search_procs)
 
+add_executable(main main.c)
+target_link_libraries(main utils word_search_procs)
+
+
 enable_testing()
 find_package(GTest REQUIRED)
 add_executable(tests tests/test.cpp)
