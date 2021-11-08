@@ -25,10 +25,11 @@ extern "C" {
 
 char *create_words();
 
-size_t word_counter(char *string_of_words);
+size_t word_counter(const char *string_of_words);
 
 char **create_array_of_words(char *string_of_words);
 
+int word_cpy(char *dest, const char *src, size_t shift);
 
 
 #if defined(__cplusplus)

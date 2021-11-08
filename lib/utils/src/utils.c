@@ -23,7 +23,7 @@ char *create_words() {
     return words;
 }
 
-size_t word_counter(char *string_of_words) {
+size_t word_counter(const char *string_of_words) {
     if (string_of_words == NULL) {
         return 0;
     }
@@ -40,6 +40,23 @@ size_t word_counter(char *string_of_words) {
 
     return word_counter;
 }
+
+int word_cpy(char *dest, const char *src, size_t shift) {
+    if(src == NULL || dest == NULL){
+        return -1;
+    }
+
+    size_t j = 0;
+    size_t i = 0;
+    while (src[shift + i] != ' ' && src[shift + i] != '\0') {
+        dest[j] = src[shift + i];
+        i++;
+        j++;
+    }
+    dest[j] = '\0';
+    return 0;
+}
+
 
 char **create_array_of_words(char *string_of_words) {
     if (string_of_words == NULL) {
