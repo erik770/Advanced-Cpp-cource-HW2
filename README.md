@@ -10,6 +10,6 @@ https://app.codecov.io/gh/erik770/HW2/commits?page=1
 ### Time
 ```
 Run ./build/stress_test && ./build/stress_test_procs
-average time: 0.0286566  - with forks
-average time: 0.203058  - w/o forks
+average time: 0.0613759  -w/o forks
+average time: 0.0006113  -with forks
 ```
